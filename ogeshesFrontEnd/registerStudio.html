@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Studio</title>
+    </head>
+    <body>
+        <form class="studioDetails" action="studioRegistration" method="post">
+            {% csrf_token %}
+            <label for="studioName">Studio Name</label>
+            <input type="text" id="studioName" name="studioName" required>
+            <br>
+
+            <label for="studioPrice">Studio Price per Hour (in USD)</label>
+            <input type="number" id="studioPrice" name="studioPrice" required>
+            <br>
+
+            <label for="studioLocation">Studio Location</label>
+            <input type="text" id="studioLocation" name="studioLocation" required>
+            <br>
+            <input type="submit" name="Register">
+        </form>
+    </body>
+</html>

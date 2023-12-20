@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fill in the form to register</h2>
+
+<form action="register" method="post">
+  {% csrf_token %}
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value="" required>
+  <label for="fname" ></label>
+  <br>
+
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value="" required><br>
+
+  <label for="alias">Nickname/Stage name</label>
+  <input type="text" id="alias" name="alias" required><br>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required title="Please enter valid email"><br>
+
+  <select name="occupation" id="occupation">
+    <option value="musician">Rapper/Singer/Artist</option>
+    <option value="model">Model</option>
+    <option value="Photographer">Photographer/Videographer/Editor</option>
+    <option value="Content Creator">Content Creator</option>
+  </select><br>
+
+  <label for="country">Country</label>
+  <input type="text" id="country" name="country" required><br>
+
+  <label for="bio">Bio</label>
+  <input type="text" id="bio" name="bio"><br>
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password"><br>
+
+  <input type="submit" name="press me">
+</form>
+
+</body>
+</html>
+

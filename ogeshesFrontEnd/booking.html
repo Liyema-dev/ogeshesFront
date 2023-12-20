@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+        <title>Studio Booking Page</title>
+    </head>
+    <body>
+        <div class="studioDetails">
+        <form action="bookings" method="post">
+            {% csrf_token %}
+            <h1>List of Studios</h1>  
+            {% for studio in studios %}
+            <h3>{{ studio.2 }}</h3>
+            <p id="studioID">{{ studio.0 }}</p>
+            <p>Price Per Hour: ${{ studio.4 }}</p>
+            <p>Location: {{ studio.3 }}</p>
+            <input type="text" hidden name="studioID" value= {{ studio.0 }}>
+            <input type="submit" name="submit">
+            {% endfor %}
+        </form>
+    </div>
+        
+    </body>
+</html>
